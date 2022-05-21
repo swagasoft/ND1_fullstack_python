@@ -1,0 +1,6 @@
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:password@127.0.0.1:5432/test'
+from flask_demo import db, User
+User.query.all()
+user =  User(name='Simon Jerry')
+db.session.add(user)
+db.session.commit()

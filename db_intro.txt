@@ -1,0 +1,11 @@
+create db  example
+psql example
+\q 
+create db  example2
+psql example
+\l
+create table table1( id INTEGER PRIMARY KEY, description VARCHAR NOT NULL);
+\dt
+\d table1
+\c example2
+\dt
