@@ -15,9 +15,10 @@ class Todo(db.Model):
     __tablename__ = 'todos'
     id = db.Column(db.Integer, primary_key=True)
     description = db.Column(db.String(), nullable=False)
+    # completed = db.Column(db.Boolean, nullable=False)
 
     def __repr__(self) -> str:
-        return f'<Todo {self.id}  {self.description} >'
+        return f'<Todo {self.id}  {self.description}  >'
 
 db.create_all()
 
@@ -41,3 +42,6 @@ def create_todo():
         print(sys.exc_info())
     finally:
         db.session.close()
+@app.route('/todos/<todo_id>/set-completed', methods=['POST'])
+def set_completed_todo():
+    pass
