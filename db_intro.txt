@@ -1,11 +1,13 @@
 create db  example
-psql example
+psql example  // select database example
 \q 
-create db  example2
+create db  example2 / create db example2
 psql example
-\l
+\l   // list database
 create table table1( id INTEGER PRIMARY KEY, description VARCHAR NOT NULL);
-\dt
+\dt   // list table list
 \d table1
 \c example2
 \dt
+
+UPDATE todos SET list_id = 1 WHERE list_id IS NULL; // update relationship
